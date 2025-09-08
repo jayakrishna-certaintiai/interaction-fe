@@ -1,0 +1,81 @@
+/* @font-face {
+  font-family: 'AlderyproSwash';
+  src: url('../../assets/fonts/adlery-pro.swash.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+.matemasie-regular {
+  font-family: "Matemasie", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.qwitcher-grypen-important {
+  font-family: "Qwitcher Grypen", cursive !important;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem !important;
+  color: #FFA500 !important;
+}
+
+.qwitcher-grypen-bold {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+.login {
+  width: 99.8%;
+  height: 100vh;
+  margin-top: -1%;
+  background-image: url("../../assets/Certainti.ai-Platform\ Login\ Page\ Design.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form-group {
+    margin-top: 0.8rem;
+    flex: 1;
+
+    .label {
+      color: #404040;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 10px;
+      /* font-family: Montserrat; */
+      font-family: "Poppins", sans-serif !important;
+      background-color: #fff;
+      width: "20px";
+    }
+
+    .input-border {
+      height: 36px;
+      background-color: #fff;
+      border: 1.2px solid #87CEEB;
+      border-radius: 20px;
+      padding-right: 15px;
+      padding-left: 10px;
+    }
+  }
+
+  .form-btn {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      margin: 1.5rem 0.5rem;
+      border-radius: 20px;
+      border: none;
+      background-color: #03a69b;
+      color: #fff;
+      padding: 7px 20px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+}

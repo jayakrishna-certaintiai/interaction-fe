@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import "react-date-range/dist/styles.css";
+@import "react-date-range/dist/theme/default.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Montserrat", sans-serif !important; */
+  font-family: "Poppins", sans-serif !important;
+}
+* {
+  /* scrollbar-width: thin; */
+  scrollbar-color: #c5c5c5;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(197, 197, 197, 0.1);
+}
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 20px;
+  border: 1px solid #f6f6f6;
+}
+.custom-toolbar .MuiButton-text {
+  visibility: hidden !important;
+}
+
+.custom-toolbar .MuiButton-startIcon {
+  visibility: visible !important; 
+  color: #f6f6f6 !important; 
+  z-index: 5 !important;
+  background-color: #00A398;
+  border-radius: 5px;
+  border: "none";
+  width: 21px; 
+  height: 17px; 
+  padding: 0px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-top: -20px; 
+}
+  .custom-toolbar .MuiCheckbox-root.Mui-checked {
+    color: 'red !important',
+  }
+
+/* css for only project larger name */
+/* .project-table-cell::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+.account-table-cell::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+.document-table-cell::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+.timesheet-table-cell::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+} */
+/* .project-table-cell::-webkit-scrollbar-thumb {
+background-color: #c5c5c5;
+} */
+
+body {
+  /* font-family: "Montserrat", sans-serif !important;
+   */
+   font-family: "Poppins", sans-serif !important;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  background-color: #f8f8f8;
+  color: #404040;
+}
+div {
+  color: #404040;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  /* font-family: "Montserrat", sans-serif !important; */
+  font-family: "Poppins", sans-serif !important;
+}
+
+a {
+  /* font-family: "Montserrat", sans-serif !important; */
+  font-family: "Poppins", sans-serif !important;
+  text-decoration: none;
+  color: #404040;
+}
+
+ul {
+  list-style: none;
+}
+ul {
+  list-style: none;
+}
+input,
+textarea,
+select {
+  border: none;
+  color: #000000;
+  font-size: 16px;
+  /* font-family: Regular; */
+  font-family: "Poppins", sans-serif !important;
+  line-height: 20px;
+  width: 100%;
+  background-color: #fff;
+}
+input[type="date"] {
+  width: "100%";
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.hover-underline-cursor:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.MuiTreeItem-iconContainer svg {
+  font-size: 30px !important;
+}
+
+.title {
+  color: #0077b6;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.sub-title {
+  color: #404040;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.body-text {
+  color: #404040;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.ans-text {
+  color: #9f9f9f;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.react-datepicker-popper .react-datepicker__month-container .react-datepicker {
+  z-index: 99 !important;
+}
+.emailContent table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.emailContent td {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.emailContent th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.emailContent p {
+  margin-bottom: 16px;
+}
+strong {
+  display: inline-block;
+  margin-top: 20px;
+}
