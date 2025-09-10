@@ -56,10 +56,10 @@ class AIService {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), this.callTimeout);
 
-                console.log('🚀 Sending Smart AI request:', payload);
+                console.log('🚀 Sending Enhanced AI request:', payload);
 
-                // Use the new smart chat endpoint that auto-detects context
-                const response = await fetch(`${apiService.baseURL}/api/v1/smart-chat/test-smart-ai`, {
+                // Use the enhanced chat endpoint for better context handling
+                const response = await fetch(`${apiService.baseURL}/api/v1/enhanced-chat/enhanced-chat`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -75,9 +75,11 @@ class AIService {
                 }
 
                 const result = await response.json();
-                console.log('🎯 Smart AI response received:', result);
+                console.log('🎯 Enhanced AI response received:', result);
 
-                if (result && result.data && result.data.response) {
+                if (result && result.data && result.data.message) {
+                    return result.data.message;
+                } else if (result && result.data && result.data.response) {
                     return result.data.response;
                 } else if (result && result.message) {
                     return result.message;

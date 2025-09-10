@@ -147,14 +147,14 @@ const HomePageChatAssistant = () => {
       };
 
       if (chatMode === 'account' && selectedAccount) {
-        // Account-specific mode - use smart chat with auto-detection
-        endpoint = `${BaseURL}/api/v1/smart-chat/test-smart-ai`;
-        // Smart AI will auto-detect the account context from the message
-        console.log('Account mode - Smart AI will auto-detect context');
+        // Account-specific mode - use enhanced chat with account-aware context
+        endpoint = `${BaseURL}/api/v1/enhanced-chat/enhanced-chat`;
+        requestBody.accountId = selectedAccount;
+        console.log('Account mode - Enhanced chat with account ID:', selectedAccount);
       } else {
-        // General chat mode - also use smart chat for enhanced capabilities
-        endpoint = `${BaseURL}/api/v1/smart-chat/test-smart-ai`;
-        console.log('General mode - using Smart AI for enhanced capabilities');
+        // General chat mode - also use enhanced chat for better performance
+        endpoint = `${BaseURL}/api/v1/enhanced-chat/enhanced-chat`;
+        console.log('General mode - using enhanced chat for better capabilities');
       }
 
       const response = await axios.post(endpoint, requestBody, Authorization_header());
@@ -162,11 +162,13 @@ const HomePageChatAssistant = () => {
       if (response.data.success) {
         const aiMessage = {
           id: Date.now() + 1,
-          content: response.data.data.response,
+          content: response.data.data.message || response.data.data.response || 'No response received',
           sender: 'ai',
           timestamp: new Date(),
           type: 'text',
           metadata: response.data.data.metadata || {},
+          accountContext: response.data.data.context?.account,
+          dataScope: response.data.data.context?.dataScope,
           sqlQuery: response.data.data.sqlQuery || null,
           downloadUrl: response.data.data.downloadUrl || null
         };
